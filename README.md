@@ -34,9 +34,8 @@ Este proyecto es una aplicación basica de consola en Java para poder gestionar 
 - Ejecutar la Base de Datos del sistema en el siguiente URL [https://github.com/OmarGR203/GuzmanOmar_pruebatec1/blob/master/empleado.sql]
 
 ## Pruebas
-/GuzmanOmar_pruebatec1
-    ImagenPruebas.png
-  README.md
+![Imagen del repositorio](https://github.com/OmarGR203/GuzmanOmar_pruebatec1/blob/master/ImagenPruebas.png)
+
 
 ## Supuestos
 - Se tomo en cuenta que los empleados necesitan un identificados unico (id).
