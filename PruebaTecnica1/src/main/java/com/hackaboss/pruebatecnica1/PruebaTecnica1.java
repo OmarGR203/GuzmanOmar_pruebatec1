@@ -23,27 +23,31 @@ public class PruebaTecnica1 {
             opcion = Integer.parseInt(sc.nextLine());
 
             switch (opcion) {
+                //Alta 
                 case 1 -> {
                     System.out.println("Ingresa los datos del nuevo empleado: ");
                     Empleado empleado = ingresarDatos();
                     controlPersis.crearEmpleado(empleado);
                     System.out.println("¡Empleado dado de alta correctamente!");
                 }
+                //Baja
                 case 2 -> {
                     System.out.println("Ingrese el id del empleado que desea eliminar: ");
                     int id = Integer.parseInt(sc.nextLine());
                     controlPersis.borrarEmpleado(id);
                     System.out.println("Empleado eliminado correctamente.");
                 }
+                //Consulta
                 case 3 -> {
                     System.out.println("¿Desea consultar todos los empleados (1) o por cargo (2)?");
                     consultarEmpleados();
-
                 }
+                //Actualizar
                 case 4 -> {
                     System.out.println("Ingrese el ID del empleado a modificar: ");
                     modEmpleados();
                 }
+                //Salida del sistema
                 case 5 -> {
                     System.out.println("Gracias por usar nuestro sistema. ¡Hasta pronto!");
                     return;
@@ -70,6 +74,7 @@ public class PruebaTecnica1 {
         System.out.print("Seleccione una opción (1-5): ");
     }
 
+    //Metodo para agregar los datos del empleado
     public static Empleado ingresarDatos() {
         Empleado empleado = new Empleado();
         Scanner sc = new Scanner(System.in);
@@ -163,6 +168,7 @@ public class PruebaTecnica1 {
         return empleado;
     }
 
+    //Metodo para listar empleados y consultar por cargo
     private static void consultarEmpleados() {
         int consultaOpcion = Integer.parseInt(sc.nextLine());
         switch (consultaOpcion) {
@@ -193,6 +199,7 @@ public class PruebaTecnica1 {
 
     }
 
+    //Metodo para modificar los datos el empleado
     private static void modEmpleados() {
         int idModificar = Integer.parseInt(sc.nextLine());
         Empleado empleadoModificar = controlPersis.buscarEmpleado(idModificar);
@@ -214,18 +221,18 @@ public class PruebaTecnica1 {
         }
     }
 
+    //Validar que el salario sea mayor a 0
     private static void validarSalario(double salario) throws SalarioInvalidoException {
-
         if (salario <= 0) {
             throw new SalarioInvalidoException("El salario ingresado es inválido. Debe ser mayor a 0");
         }
 
     }
 
+    //Validar que el dato no se encuentre vacio
     private static void validarDato(String dato) {
         if (dato == null || dato.trim().isEmpty()) {
             throw new IllegalArgumentException("Este dato no puede estar vacío");
         }
-
     }
 }
