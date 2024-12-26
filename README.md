@@ -7,10 +7,10 @@ Este proyecto es una aplicación basica de consola en Java para poder gestionar 
 
 ## Funcionalidades
 
--**Alta de empleado:** Permite ingresar los datos por consola del nombre, apellido, cargo, salario y fecha de ingreso de un nuevo empleado. 
--**Baja de empleado:** Permite eliminar a un empleado mediante su identificados unico (id).
--**Consulta de empleado:** Permite realizar la consulta de todos los empleados registrados asi como buscar los empleados filtrando por su cargo.
--**Actualización de empleado:** Permite modificar la informacion de un empleado existente.
+* **Alta de empleado:** Permite ingresar los datos por consola del nombre, apellido, cargo, salario y fecha de ingreso de un nuevo empleado. 
+* **Baja de empleado:** Permite eliminar a un empleado mediante su identificados unico (id).
+* **Consulta de empleado:** Permite realizar la consulta de todos los empleados registrados asi como buscar los empleados filtrando por su cargo.
+* **Actualización de empleado:** Permite modificar la informacion de un empleado existente.
 
  ### Clases
  - **Empleado:** Clase que contiene la entidad del empleado, en donde se declaran sus atributos y sus metodos constructores, getters y setters.
@@ -31,10 +31,10 @@ Este proyecto es una aplicación basica de consola en Java para poder gestionar 
 - Gestor de Base de Datos MySQL
 - IDE
 - Servidor de Base de Datos
-
-## Cuestiones tecnicas
 - Ejecutar la Base de Datos del sistema en el siguiente URL [https://github.com/OmarGR203/GuzmanOmar_pruebatec1/blob/master/empleado.sql]
 
+## Pruebas
+![Ilustración del ingreso de un empleado]("https://github.com/OmarGR203/GuzmanOmar_pruebatec1/blob/master/ImagenPruebas.png")  
 
 ## Supuestos
 - Se tomo en cuenta que los empleados necesitan un identificados unico (id).
