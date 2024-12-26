@@ -193,13 +193,6 @@ public class PruebaTecnica1 {
 
     }
 
-    private static void validarDato(String dato) {
-        if (dato == null || dato.trim().isEmpty()) {
-            throw new IllegalArgumentException("Este dato no puede estar vacío");
-        }
-
-    }
-
     private static void modEmpleados() {
         int idModificar = Integer.parseInt(sc.nextLine());
         Empleado empleadoModificar = controlPersis.buscarEmpleado(idModificar);
@@ -225,6 +218,13 @@ public class PruebaTecnica1 {
 
         if (salario <= 0) {
             throw new SalarioInvalidoException("El salario ingresado es inválido. Debe ser mayor a 0");
+        }
+
+    }
+
+    private static void validarDato(String dato) {
+        if (dato == null || dato.trim().isEmpty()) {
+            throw new IllegalArgumentException("Este dato no puede estar vacío");
         }
 
     }
